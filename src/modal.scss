@@ -1,0 +1,79 @@
+button {
+    color: white;
+    margin: 0 0.5rem 0.5rem 0;
+    border: 0rem;
+    border-radius: 0.2rem;
+    background-color: dodgerblue;
+    padding: 0.6rem 0.8rem;
+    font-weight: 600;
+}
+
+.active {
+    body {
+        transform: scale(0.9) translateY(calc(0.05 * 100vh));
+    }
+    .cover {
+        visibility: visible;
+        opacity: 1;
+    }
+    .popup-animate {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1.1111);
+    }
+}
+
+modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+// Cover is black popup background
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.popup {
+    position: relative;
+    visibility: hidden;
+    top: 4rem;
+    width: 30rem;
+    margin: auto;
+    opacity: 0;
+    z-index: 2;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.7);
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    transform: scale(0.8);
+    .question {
+        color: dodgerblue;
+        input {
+            margin-left: 0.4rem;
+            padding: 0.4rem 0.6rem;
+            color: dodgerblue;
+            border: 1px solid dodgerblue;
+            border-radius: 0.2rem;
+        }
+    }
+}
+
+.ready {
+    body,
+    .popup,
+    .cover {
+        transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}

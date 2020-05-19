@@ -1,0 +1,8 @@
+<aside id="default-popup" class="popup">
+    <h2>That's all, folks</h2>
+    <p> You can hit ESC or click outside to close the modal. Give it a go to see the reverse transition. </p>
+    <p class="question">Type your Name:<input type="text" ref="modalinput"></p>
+    <button click.trigger="ok(modalinput.value)">OK</button>
+    <button click.trigger="cancel()">Cancel</button>
+</aside>
+<div touchstart.trigger="cancel()" click.trigger="cancel()" class="cover"></div>
